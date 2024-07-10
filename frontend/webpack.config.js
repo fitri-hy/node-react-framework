@@ -3,6 +3,25 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const fs = require('fs');
 
+function getDependenciesFromFile() {
+  const dependencies = {};
+  const filePath = path.resolve(__dirname, '../dep-build.txt');
+  try {
+    const data = fs.readFileSync(filePath, 'utf8');
+    console.log('dep-build.txt content:', data);
+    data.split('\n').forEach(line => {
+      const [name, version] = line.split(':').map(item => item.trim());
+      if (name && version) {
+        dependencies[name] = version;
+      }
+    });
+  } catch (error) {
+    console.error('Error reading dep-build.txt:', error);
+  }
+  console.log('Parsed dependencies:', dependencies);
+  return dependencies;
+}
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -40,6 +59,9 @@ module.exports = {
         },
         { 
           from: '../backend', to: 'backend'
+        },
+        { 
+          from: '../.env', to: 'backend'
         }
       ]
     }),
@@ -54,11 +76,7 @@ module.exports = {
             scripts: {
               start: 'node server.js'
             },
-            dependencies: {
-              "cors": "^2.8.5",
-              "express": "^4.17.1",
-              "path": "^0.12.7"
-            },
+            dependencies: getDependenciesFromFile(),
             license: 'MIT'
           };
           const packageJsonPath = path.join(__dirname, '..', 'dist', 'backend', 'package.json');
