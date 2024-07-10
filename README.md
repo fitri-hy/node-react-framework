@@ -1,12 +1,12 @@
-# Fullstack Framework (EN)
+# Node-React Framework (EN)
 
 Fullstack Framework with a backend using Node.js and a frontend using React.js running on one server combines the power of these two technologies to build modern and efficient web applications.
 
 ## Instalation
 
 ```
-git clone https://github.com/fitri-hy/fullstack-framework.git
-cd fullstack-framework
+git clone https://github.com/fitri-hy/node-react-framework.git
+cd node-react-framework
 npm install
 npm start
 ```
@@ -26,7 +26,7 @@ npm start
 ## Folder Structure
 
 ```
-fullstack-framework/
+node-react-framework/
 │
 ├── backend/
 │   ├── routes/
@@ -52,15 +52,15 @@ fullstack-framework/
 <hr>
 <hr>
 
-# Fullstack Framework (ID)
+# Node-React Framework (ID)
 
 Fullstack Framework dengan backend menggunakan Node.js dan frontend menggunakan React.js yang berjalan di satu server menggabungkan kekuatan kedua teknologi ini untuk membangun aplikasi web yang modern dan efisien.
 
 ## Instalasi
 
 ```
-git clone https://github.com/fitri-hy/fullstack-framework.git
-cd fullstack-framework
+git clone https://github.com/fitri-hy/node-react-framework.git
+cd node-react-framework
 npm install
 npm start
 ```
@@ -80,7 +80,7 @@ npm start
 ## Struktur Folder
 
 ```
-fullstack-framework/
+node-react-framework/
 │
 ├── backend/
 │   ├── routes/
