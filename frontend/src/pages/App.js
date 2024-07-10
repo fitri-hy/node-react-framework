@@ -25,7 +25,7 @@ const App = () => {
 		  </p>
 		  <div className="links">
 			<a className="link" href="https://i-as.dev/" target="_blank">Official Site</a>
-			<a className="link" href="https://github.com/fitri-hy/fullstack-framework" target="_blank">Github</a>
+			<a className="link" href="https://github.com/fitri-hy/node-react-framework" target="_blank">Github</a>
 		  </div>
 		</div>
 	  </div>
